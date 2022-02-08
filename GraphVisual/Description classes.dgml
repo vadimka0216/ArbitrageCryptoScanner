@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph ZoomLevel="1" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="BaseGraph" Category="Comment" Bounds="-419.976424102783,-263.619144897461,76.7133333333334,25.96" Label="BaseGraph" UseManualLocation="True" />
+    <Node Id="BaseIntFloatGraph" Category="Comment" Bounds="-392.800290934245,-151.377363227455,116.733333333333,25.96" Label="BaseIntFloatGraph" />
+    <Node Id="CSV" Category="Comment" Bounds="-16.9882088979083,-327.345940649414,50,25.96" UseManualLocation="True" />
+    <Node Id="ControlGraph" Category="Comment" Bounds="-380.206363932292,-207.337463227455,91.7833333333333,25.96" Label="ControlGraph" />
+    <Node Id="IntFloatGraph" Category="Comment" Bounds="-450.188208211263,-95.4172628795547,105.976666666667,25.96" Label="IntFloatGraphPB" UseManualLocation="True" />
+    <Node Id="IntFloatZGC" Category="Comment" Bounds="-314.211541239421,-95.2577648387832,114.883333333333,25.96" Label="IntFloatGraphZGC" UseManualLocation="True" />
+    <Node Id="ObjectsGraph1" Bounds="-470.188208211263,-303.619237268066,290.860000305176,254.321572429283" Group="Expanded" Label="Objects Graph" UseManualLocation="True" />
+    <Node Id="StoragePoint" Category="Comment" Bounds="-308.46308614095,-263.297563227455,87.7766666666666,25.96" UseManualLocation="True" />
+  </Nodes>
+  <Links>
+    <Link Source="BaseGraph" Target="ControlGraph" Bounds="-370.710001988041,-237.659137268066,19.6947691377596,23.4320465239328" />
+    <Link Source="BaseIntFloatGraph" Target="IntFloatGraph" Bounds="-375.923427143577,-125.417363227455,26.9311096667769,24.0107953681814" />
+    <Link Source="BaseIntFloatGraph" Target="IntFloatZGC" Bounds="-316.470639856016,-125.417363227455,34.4429659466885,24.8883864587815" />
+    <Link Source="ControlGraph" Target="BaseIntFloatGraph" Bounds="-334.386912180112,-181.377463227455,0.0446296799115657,21.000120324273" />
+    <Link Source="ObjectsGraph1" Target="BaseGraph" Category="Contains" />
+    <Link Source="ObjectsGraph1" Target="BaseIntFloatGraph" Category="Contains" />
+    <Link Source="ObjectsGraph1" Target="ControlGraph" Category="Contains" />
+    <Link Source="ObjectsGraph1" Target="IntFloatGraph" Category="Contains" />
+    <Link Source="ObjectsGraph1" Target="IntFloatZGC" Category="Contains" />
+    <Link Source="ObjectsGraph1" Target="StoragePoint" Category="Contains" />
+    <Link Source="StoragePoint" Target="ControlGraph" Bounds="-311.118892892674,-237.337563227455,30.3678916676141,24.3675309425016" />
+  </Links>
+  <Categories>
+    <Category Id="Comment" Label="Comment" Description="Represents a user defined comment on the diagram" CanBeDataDriven="True" IsProviderRoot="False" NavigationActionLabel="Comments" />
+    <Category Id="Contains" Label="Contains" Description="Whether the source of the link contains the target object" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contained By" IsContainment="True" OutgoingActionLabel="Contains" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="Group" Label="Group" Description="Display the node as a group" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsProviderRoot" Label="IsProviderRoot" Description="IsProviderRoot" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+    <Property Id="ZoomLevel" DataType="System.String" />
+  </Properties>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Comment" ValueLabel="Has comment">
+      <Condition Expression="HasCategory('Comment')" />
+      <Setter Property="Background" Value="#FFFFFACD" />
+      <Setter Property="Stroke" Value="#FFE5C365" />
+      <Setter Property="StrokeThickness" Value="1" />
+      <Setter Property="NodeRadius" Value="2" />
+      <Setter Property="MaxWidth" Value="250" />
+    </Style>
+  </Styles>
+</DirectedGraph>
